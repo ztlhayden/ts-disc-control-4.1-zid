@@ -35,7 +35,7 @@ app.get(`${config.web.loginUrl}`, (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Nothing to see here move along!");
+  res.send("Indy Center TeamSpeak Authentication Service");
 });
 
 app.get(
@@ -104,7 +104,7 @@ app.get(
       res.redirect(config.web.clientBaseUrl);
     } else {
       res.send(
-        `Hello ${json.username} your Discord ID is ${json.id}, you Teamspeak ID is ${req.cookies.tsid}. <br /> If you have problems with synchronization send the line above to high command!`
+        `Hello ${json.username} your Discord ID is ${json.id}, you Teamspeak ID is ${req.cookies.tsid}. <br /> If you have problems with synchronization send this information to the Tech Team.`
       );
     }
   })
